@@ -12,6 +12,8 @@ public class WorkerBee {
 
     public WorkerBee(){
         arduino = new I2C(Port.kMXP, DEVICE_PORT);
+        charBuffer = new char[4];
+        rgbBuffer = new RGB[4];
     }
 
     public void setChar(char input, int position){
